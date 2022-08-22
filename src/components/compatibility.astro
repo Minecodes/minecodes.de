@@ -1,0 +1,83 @@
+---
+import ContentSection from "~/components/content-section.astro";
+import CompatibilityList from "~/components/compatibility-list.astro";
+
+const frameworks = [
+  {
+    title: "JAVASCRIPT",
+    icon: "mdi:outline-php",
+    url: "https://www.ecma-international.org/publications-and-standards/standards/ecma-262/",
+  },
+  {
+    title: "C / C++",
+    icon: "frameworks/preact",
+    url: "https://isocpp.org/",
+  },
+  {
+    title: "GO",
+    icon: "frameworks/svelte",
+    url: "https://go.dev/",
+  },
+  {
+    title: "RUST",
+    icon: "frameworks/vue",
+    url: "https://www.rust-lang.org/",
+  },
+  {
+    title: "C#",
+    icon: "frameworks/solid",
+    url: "https://docs.microsoft.com/de-de/dotnet/csharp/",
+  },
+  {
+    title: "PYTHON",
+    icon: "frameworks/lit",
+    url: "https://www.python.org/",
+  },
+];
+
+const platforms = [
+  {
+    title: "GIT",
+    icon: "platforms/netlify",
+    url: "https://git-scm.com/",
+  },
+  {
+    title: "GITHUB",
+    icon: "platforms/vercel",
+    url: "https://github.com/",
+  },
+  {
+    title: "CLOUDFLARE",
+    icon: "fa-brands:cloudflare",
+    url: "https://cloudflare.com/",
+  },
+  {
+    title: "VS-CODE",
+    icon: "platforms/render",
+    url: "https://code.visualstudio.com/",
+  },
+  {
+    title: "INTELLIJ IDEA",
+    icon: "fa-brands:github",
+    url: "https://www.jetbrains.com/idea/",
+  },
+  {
+    title: "GITHUB CLI",
+    icon: "fa-brands:gitlab",
+    url: "https://cli.github.com/",
+  },
+];
+---
+
+<ContentSection title="$ cat skills.txt" id="compatibility">
+  <CompatibilityList
+    title="Programming Languages"
+    data={frameworks}
+    url="https://docs.astro.build/core-concepts/framework-components/"
+  />
+  <CompatibilityList
+    title="Tools"
+    data={platforms}
+    url="https://docs.astro.build/guides/deploy/"
+  />
+</ContentSection>

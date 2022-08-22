@@ -1,0 +1,36 @@
+---
+import { Icon } from "astro-icon";
+import ContentSection from "~/components/content-section.astro";
+---
+
+<ContentSection title="$ whoami" id="intro">
+  <Fragment slot="lead">
+    I'm a administrator, moderator, content creator, front- and backend
+    developer. I work at Vipecity and TryGaming. I'm releasing projects on <span
+      class="text-primary"
+      >Github
+    </span>
+    like libraries, small scripts and tools. I do also create content on <span
+      class="text-primary"
+      >Twitch
+    </span>
+    and <span class="text-primary">YouTube</span>. I also worked at Minimani
+    (closed project).
+  </Fragment>
+  <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+    <a
+      href="https://github.com/Minecodes"
+      class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current"
+    >
+      <Icon pack="mdi" name="github" class="h-8" />
+      <span>Github</span>
+    </a>
+    <a
+      href="/social"
+      class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current"
+    >
+      <Icon pack="mdi" name="rocket" class="h-8" />
+      <span>Social</span>
+    </a>
+  </div>
+</ContentSection>

@@ -1,0 +1,180 @@
+/* TODO: consider creating <Button> and <GradientText> components */
+a,
+.btn {
+  @apply transition-colors duration-200;
+  @apply hover:text-secondary;
+  @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-transparent focus:ring-secondary;
+}
+
+.gradient-text {
+  @apply text-transparent bg-clip-text;
+  @apply bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-pink-500;
+}
+
+/* * Youtube */
+
+.yt {
+  background-color: #cd201f;
+  border-radius: 28px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Courier New;
+  font-size: 17px;
+  padding: 16px 76px;
+  text-decoration: none;
+}
+.yt:hover {
+  background-color: #b41d1d;
+}
+.yt:active {
+  position: relative;
+  top: 1px;
+}
+
+/* * Twitch */
+
+.tw {
+  background-color: #a970ff;
+  border-radius: 28px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Courier New;
+  font-size: 17px;
+  padding: 16px 76px;
+  text-decoration: none;
+}
+.tw:hover {
+  background-color: #9062d6;
+}
+.tw:active {
+  position: relative;
+  top: 1px;
+}
+
+/* * Tiktok */
+
+.tk {
+  background-color: #ee1d51;
+  border-radius: 28px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Courier New;
+  font-size: 17px;
+  padding: 16px 76px;
+  text-decoration: none;
+}
+.tk:hover {
+  background-color: #d81c4b;
+}
+.tk:active {
+  position: relative;
+  top: 1px;
+}
+
+/* * Reddit */
+
+.rd {
+  background-color: #ff5700;
+  border-radius: 28px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Courier New;
+  font-size: 17px;
+  padding: 16px 76px;
+  text-decoration: none;
+}
+.rd:hover {
+  background-color: #e24e04;
+}
+.rd:active {
+  position: relative;
+  top: 1px;
+}
+
+/* * Twitter */
+
+.tt {
+  background-color: #1da1f2;
+  border-radius: 28px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Courier New;
+  font-size: 17px;
+  padding: 16px 76px;
+  text-decoration: none;
+}
+.tt:hover {
+  background-color: #1884c7;
+}
+.tt:active {
+  position: relative;
+  top: 1px;
+}
+
+/* * Mastodon */
+
+.md {
+  background-color: #3088d4;
+  border-radius: 28px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Courier New;
+  font-size: 17px;
+  padding: 16px 76px;
+  text-decoration: none;
+}
+.md:hover {
+  background-color: #2d7cc2;
+}
+.md:active {
+  position: relative;
+  top: 1px;
+}
+
+/* * dev.to */
+
+.dt {
+  background-color: #131418;
+  border-radius: 28px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Courier New;
+  font-size: 17px;
+  padding: 16px 76px;
+  text-decoration: none;
+}
+.dt:hover {
+  background-color: #22242b;
+}
+.dt:active {
+  position: relative;
+  top: 1px;
+}
+
+/* * Github */
+
+.gh {
+  background-color: #eff2f6;
+  border-radius: 28px;
+  display: inline-block;
+  cursor: pointer;
+  color: #000000;
+  font-family: Courier New;
+  font-size: 17px;
+  padding: 16px 76px;
+  text-decoration: none;
+}
+.gh:hover {
+  background-color: #a5a7aa;
+}
+.gh:active {
+  position: relative;
+  top: 1px;
+}

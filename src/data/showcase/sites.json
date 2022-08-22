@@ -1,0 +1,17 @@
+[
+  {
+    "title": "MDHTML",
+    "image": "src/data/showcase/images/mdhtml.png",
+    "url": "https://mdhtml.minecodes.de"
+  },
+  {
+    "title": "DOCS",
+    "image": "src/data/showcase/images/docs.png",
+    "url": "https://docs.minecodes.de/"
+  },
+  {
+    "title": "MODPACKS / MODS",
+    "image": "src/data/showcase/images/mods.png",
+    "url": "https://mods.minecodes.de/"
+  }
+]

@@ -1,0 +1,92 @@
+---
+import Compatibility from "~/components/compatibility.astro";
+import Features from "~/components/features.astro";
+import Footer from "~/components/footer.astro";
+import Header from "~/components/header.astro";
+import Intro from "~/components/intro.astro";
+import Showcase from "~/components/showcase.astro";
+import Splash from "~/components/splash.astro";
+import Header from "~/components/header.astro";
+import "~/styles/index.css";
+
+const { site } = Astro;
+const image = new URL("social.jpg", site);
+const description =
+  "A administrator, content creator, front- and backend developer.";
+---
+
+<html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <title>Minecodes</title>
+    <meta name="description" content={description} />
+
+    <!-- fonts -->
+    <link rel="preload" as="style" href="/fonts/inter.css" />
+    <link
+      rel="stylesheet"
+      href="/fonts/inter.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="/fonts/inter.css" />
+    </noscript>
+
+    <!-- social media -->
+    <meta property="og:title" content="Social | Minecodes" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={site} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- initialize theme -->
+    <script is:inline>
+      const themeSaved = localStorage.getItem("theme");
+
+      if (themeSaved) {
+        document.documentElement.dataset.theme = themeSaved;
+      } else {
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+      }
+
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (event) => {
+          if (!localStorage.getItem("theme")) {
+            document.documentElement.dataset.theme = event.matches
+              ? "dark"
+              : "light";
+          }
+        });
+    </script>
+  </head>
+  <body
+    class="h-full overflow-x-hidden text-base bg-default text-default selection:bg-secondary selection:text-white"
+  >
+    <Header />
+    <Splash />
+    <div class="px-8 py-32 text-center">
+      <h1>Social</h1><br />
+      <a href="https://youtube.com/Minecodes" class="yt">YouTube</a><br /><br />
+      <a href="https://twitch.tv/Minecodes" class="tw">Twitch</a><br /><br />
+      <a href="https://tiktok.com/@minecodes" class="tk">Tiktok</a><br /><br />
+      <a href="https://reddit.com/u/Minecodes" class="rd">Reddit</a><br /><br />
+      <a href="https://twitter.com/minecodes_" class="tt">Twitter</a><br /><br
+      />
+      <a href="https://mastodon.social/web/Minecodes" class="md">Mastodon</a><br
+      /><br />
+      <a href="https://dev.to/Minecodes" class="dt">dev.to</a><br /><br />
+      <a href="https://github.com/Minecodes" class="gh">Github</a>
+    </div>
+    <Footer />
+  </body>
+</html>

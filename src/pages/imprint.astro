@@ -1,0 +1,179 @@
+---
+import Compatibility from "~/components/compatibility.astro";
+import Features from "~/components/features.astro";
+import Footer from "~/components/footer.astro";
+import Header from "~/components/header.astro";
+import Intro from "~/components/intro.astro";
+import Showcase from "~/components/showcase.astro";
+import Splash from "~/components/splash.astro";
+import Header from "~/components/header.astro";
+import "~/styles/index.css";
+
+const { site } = Astro;
+const image = new URL("social.jpg", site);
+const description =
+  "A administrator, content creator, front- and backend developer.";
+---
+
+<html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <title>Minecodes</title>
+    <meta name="description" content={description} />
+
+    <!-- fonts -->
+    <link rel="preload" as="style" href="/fonts/inter.css" />
+    <link
+      rel="stylesheet"
+      href="/fonts/inter.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="/fonts/inter.css" />
+    </noscript>
+
+    <!-- social media -->
+    <meta property="og:title" content="Imprint | Minecodes" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={site} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- initialize theme -->
+    <script is:inline>
+      const themeSaved = localStorage.getItem("theme");
+
+      if (themeSaved) {
+        document.documentElement.dataset.theme = themeSaved;
+      } else {
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+      }
+
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (event) => {
+          if (!localStorage.getItem("theme")) {
+            document.documentElement.dataset.theme = event.matches
+              ? "dark"
+              : "light";
+          }
+        });
+    </script>
+  </head>
+  <body
+    class="h-full overflow-x-hidden text-base bg-default text-default selection:bg-secondary selection:text-white"
+  >
+    <Header />
+    <Splash />
+    <div class="px-8 py-32">
+      <h1>Impressum</h1><br /><br /><br /><br />
+      <h2 id="m46">Diensteanbieter</h2><br />
+      <p>Thies Ohme</p>
+      <p>Kirchentellinsfurter Str. 34/1</p>
+      <p>Wannweil</p>
+      <p>Germany</p><br /><br />
+      <h2 id="m56">Kontaktmöglichkeiten</h2><br />
+      E-Mail-Adresse: <p>
+        <a href="mailto:contact@minecodes.de">contact@minecodes.de</a>
+      </p>
+      Telefon: <p>071219303672</p><br /><br />
+      <h2 id="m172">Social Media und andere Onlinepräsenzen</h2><br />
+      Dieses Impressum gilt auch für die folgenden Social-Media-Präsenzen und Onlineprofile:
+      <p>
+        <a href="https://github.com/Minecodes" target="_blank"
+          >https://github.com/Minecodes
+        </a>
+      </p>
+      <p>
+        <a href="https://gitlab.com/Minecodes13" target="_blank"
+          >https://gitlab.com/Minecodes13
+        </a>
+      </p>
+      <p>
+        <a href="https://twitter.com/minecodes_" target="_blank"
+          >https://twitter.com/minecodes_
+        </a>
+      </p>
+      <p>
+        <a href="https://twitter.com/Minecodes1" target="_blank"
+          >https://twitter.com/Minecodes1
+        </a>
+      </p>
+      <p>
+        <a href="https://mastodon.social/web/@Minecodes" target="_blank"
+          >https://mastodon.social/web/@Minecodes
+        </a>
+      </p>
+      <p>
+        <a href="https://youtube.com/Minecodes" target="_blank"
+          >https://youtube.com/Minecodes
+        </a>
+      </p>
+      <p>
+        <a href="https://www.pinterest.de/Minecodes/" target="_blank"
+          >https://www.pinterest.de/Minecodes/
+        </a>
+      </p>
+      <p>
+        <a href="https://dev.to/Minecodes" target="_blank"
+          >https://dev.to/Minecodes
+        </a>
+      </p>
+      <p>
+        <a href="https://www.tiktok.com/@minecodes" target="_blank"
+          >https://www.tiktok.com/@minecodes
+        </a>
+      </p>
+      <p>
+        <a href="https://twitch.tv/Minecodes" target="_blank"
+          >https://twitch.tv/Minecodes
+        </a>
+      </p><br /><br />
+      <h2 id="m65">Haftungs- und Schutzrechtshinweise</h2><br />
+      <p>
+        Haftungsausschluss:<br />
+        Die Inhalte dieses Onlineangebotes wurden sorgfältig und nach unserem aktuellen
+        Kenntnisstand erstellt, dienen jedoch nur der Information und entfalten keine
+        rechtlich bindende Wirkung, sofern es sich nicht um gesetzlich verpflichtende
+        Informationen (z.B. das Impressum, die Datenschutzerklärung, AGB oder verpflichtende
+        Belehrungen von Verbrauchern) handelt. Wir behalten uns vor, die Inhalte
+        vollständig oder teilweise zu ändern oder zu löschen, soweit vertragliche
+        Verpflichtungen unberührt bleiben. Alle Angebote sind freibleibend und unverbindlich.
+      </p>
+      <p>
+        Links auf fremde Webseiten: Die Inhalte fremder Webseiten, auf die wir
+        direkt oder indirekt verweisen, liegen außerhalb unseres
+        Verantwortungsbereiches und wir machen sie uns nicht zu Eigen. Für alle
+        Inhalte und Nachteile, die aus der Nutzung der in den verlinkten
+        Webseiten aufrufbaren Informationen entstehen, übernehmen wir keine
+        Verantwortung.
+      </p>
+      <p>
+        Hinweise auf Rechtsverstöße: Sollten Sie innerhalb unseres
+        Internetauftritts Rechtsverstöße bemerken, bitten wir Sie uns auf diese
+        hinzuweisen. Wir werden rechtswidrige Inhalte und Links nach
+        Kenntnisnahme unverzüglich entfernen.
+      </p><br /><br />
+      <p class="seal">
+        <a
+          href="https://datenschutz-generator.de/"
+          title="Rechtstext von Dr. Schwenke - für weitere Informationen bitte anklicken."
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          >Erstellt mit kostenlosem Datenschutz-Generator.de von Dr. Thomas
+          Schwenke
+        </a>
+      </p>
+    </div>
+    <Footer />
+  </body>
+</html>
